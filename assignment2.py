@@ -44,9 +44,7 @@ def downloadData(url):
     with urllib.request.urlopen(req) as response:
         the_page = response.read()
 
-    # return the data
     return response
-
 
 def processData(downloadData):
     person_data = dict()
@@ -65,7 +63,6 @@ def processData(downloadData):
         person_data[id] = (name, birthday)
     return person_data
 
-
 def displayPerson(id, personData):
     try:
         name, birthday = personData[id]
@@ -83,5 +80,3 @@ def main(url):
         if id < 0:
             break
         displayPerson(id, personData)
-
-
