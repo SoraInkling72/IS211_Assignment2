@@ -50,15 +50,11 @@ def downloadData(url):
 
 def processData(downloadData):
     person_data = dict()
-
     for i, line in enumerate(file_content.split("\n")):
         if i == 0:
-            # skip the header
             continue
         if len(line) == 0:
-            # skip blank lines
             continue
-
         elements = line.split(",")
         id = int(elements[0])
         name = elements[1]
