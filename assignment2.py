@@ -69,9 +69,9 @@ def processData(downloadData):
 def displayPerson(id, personData):
     try:
         name, birthday = personData[id]
-        print(f"Person #{id} is {name} with a birthday of {birthday:%Y-%m-%d}")
+        print(f"Person #{id} on the list is {name} with a birthday of {birthday:%Y-%m-%d}")
     except KeyError:
-        print(f"No user found with that id")
+        print(f"No such user was found with that id")
 
 
 def main(url):
